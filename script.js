@@ -1,24 +1,33 @@
 console.log("Script carregado");
 
-const projetos = [
+document.addEventListener("DOMContentLoaded", () => {
 
-  {
-    nome: "SIGEC(Sistema de Gerenciamento Comercial)",
-    descricao: "Sistema para gerenciar produtos, vendas e estoque.",
-    link: "https://vict0r213.github.io/Sigec/"
+  const projetos = [
+    {
+      nome: "SIGEC (Sistema de Gerenciamento Comercial)",
+      descricao: "Sistema para gerenciar produtos, vendas e estoque.",
+      link: "https://vict0r213.github.io/sigec/"
+    }
+  ];
+
+  const container = document.getElementById("lista-projetos");
+
+  if (!container) {
+    console.error("ERRO: container não encontrado");
+    return;
   }
 
-const container = document.getElementById("lista-projetos");
+  projetos.forEach((projeto) => {
+    const div = document.createElement("div");
+    div.classList.add("projeto");
 
-projetos.forEach(projeto => {
-  const div = document.createElement("div");
-  div.classList.add("projeto");
+    div.innerHTML = `
+      <h3>${projeto.nome}</h3>
+      <p>${projeto.descricao}</p>
+      <a href="${projeto.link}" target="_blank">Acessar sistema</a>
+    `;
 
-  div.innerHTML = `
-    <h3>${projeto.nome}</h3>
-    <p>${projeto.descricao}</p>
-    <a href="${projeto.link}" target="_blank">Ver mais</a>
-  `;
+    container.appendChild(div);
+  });
 
-  container.appendChild(div);
 });
