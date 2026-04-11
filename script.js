@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("ERRO: container não encontrado");
     return;
   }
+  ];
 
   projetos.forEach((projeto) => {
     const div = document.createElement("div");
@@ -30,4 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
     container.appendChild(div);
   });
 
+<<<<<<< HEAD
 });
+=======
+  container.appendChild(div);
+});
+>>>>>>> ffadf9570b83215f32b14511df9b2119f60db6e2
