@@ -7,6 +7,7 @@ const projetos = [
     descricao: "Sistema para gerenciar produtos, vendas e estoque.",
     link: "https://vict0r213.github.io/Sigec/"
   }
+  ];
 
 const container = document.getElementById("lista-projetos");
 
