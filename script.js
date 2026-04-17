@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       nome: "SIGEC (Sistema de Gerenciamento Comercial)",
       descricao: "Sistema para gerenciar produtos, vendas e estoque.",
-      link: "https://vict0r213.github.io/"
+      link: "https://vict0r213.github.io/sigec/"
     }
   ];
 
