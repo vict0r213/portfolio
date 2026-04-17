@@ -10,30 +10,49 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   ];
 
-  const container = document.getElementById("lista-projetos");
-
-  if (!container) {
-    console.error("ERRO: container não encontrado");
-    return;
-  }
+  const habilidades = [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Git",
+    "PHP",
+    "MySQL",
+    "Responsividade",
+    "UI/UX Design"
   ];
 
-  projetos.forEach((projeto) => {
-    const div = document.createElement("div");
-    div.classList.add("projeto");
+  // Renderizar Projetos
+  const containerProjetos = document.getElementById("lista-projetos");
 
-    div.innerHTML = `
-      <h3>${projeto.nome}</h3>
-      <p>${projeto.descricao}</p>
-      <a href="${projeto.link}" target="_blank">Acessar sistema</a>
-    `;
+  if (containerProjetos) {
+    projetos.forEach((projeto) => {
+      const div = document.createElement("div");
+      div.classList.add("projeto");
 
-    container.appendChild(div);
-  });
+      div.innerHTML = `
+        <h3>${projeto.nome}</h3>
+        <p>${projeto.descricao}</p>
+        <a href="${projeto.link}" target="_blank">Acessar sistema</a>
+      `;
 
-<<<<<<< HEAD
+      containerProjetos.appendChild(div);
+    });
+  } else {
+    console.error("ERRO: container de projetos não encontrado");
+  }
+
+  // Renderizar Habilidades
+  const containerHabilidades = document.getElementById("lista-habilidades");
+
+  if (containerHabilidades) {
+    habilidades.forEach((habilidade) => {
+      const span = document.createElement("span");
+      span.classList.add("habilidade");
+      span.textContent = habilidade;
+      containerHabilidades.appendChild(span);
+    });
+  } else {
+    console.error("ERRO: container de habilidades não encontrado");
+  }
+
 });
-=======
-  container.appendChild(div);
-});
->>>>>>> ffadf9570b83215f32b14511df9b2119f60db6e2
